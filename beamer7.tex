@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\title{Assignment 7 : Papoulis Textbook }
+\author{Akshitha Kola}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\logo{}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Chapter 8 Example 8.28}
+    We are given an N ($\eta$, 1) random variable x and we wish to test the simple hypothesis $\eta = \eta_{0}$ against $\eta \neq \eta_{0}$
+    \end{block}
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+\frametitle{Solution}
+In this problem $\eta_{m0} = \eta_{0}$ and 
+\begin{align}
+f(X,\eta) = \frac{1}{\sqrt{(2\pi)^{n}}}exp\left\lbrace -\frac{1}{2}\sum {(x_{i} - \eta)^{2}}\right\rbrace
+\end{align}
+The above expression is maximum if the sum 
+\begin{align}
+\sum {(x_{i} - \eta)^{2}} = \sum {(x_{i} - \bar{x})^{2}} + n(\bar{x} - \eta)^{2}
+\end{align}
+is minimum, that is $\eta = \bar{x}$. Hence $\eta_{m} = \bar{x}$.
+\begin{align}
+\lambda = \frac{exp\left\lbrace -\frac{1}{2}\sum {(x_{i} - \eta)^{2}}\right\rbrace}{exp\left\lbrace -\frac{1}{2}\sum {(x_{i} - \bar{x})^{2}}\right\rbrace} = exp\left\lbrace -\frac{n}{2}(\bar{x} - \eta_{0})^{2}\right\rbrace
+\end{align}
+\end{frame}
+
+\begin{frame}
+\begin{align}
+ \textbf{w} = -2log\lambda = n(\bar{x} - \eta_{0})^{2} = (\bar{x} - \eta_{0})^{2} = \frac{(\bar{x} - \eta_{0})^{2}}{\frac{1}{\sqrt{n}}}
+ \end{align}
+ The right side is a random variable with $(\chi)^{2}$(1) distribution. Hence the random variable 
+\textbf{w} has a $(\chi)^{2}(m - m_{0})$ distribution not only asymptotically, but for any n. 
+\end{frame}
+\end{document}
