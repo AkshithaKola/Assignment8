@@ -1,0 +1,52 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\title{Assignment 8 : Papoulis Textbook }
+\author{Akshitha Kola}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\logo{}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Chapter 9 Example 9.11}
+     Suppose that x(t) is a WSS process with autocorrelation 
+       \begin{align}     
+         R(\tau) = Ae^{\alpha |\tau|} \nonumber
+       \end{align}    
+     Determine the second moment of the random variable x(8) - x(5). 
+    \end{block}
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+\frametitle{Solution}
+     A stochastic process x(i) is called wide-sense stationary (abbreviated WSS) if its mean is constant. $E\lbrace x(i)\rbrace = \eta$. \\
+     Its autocorrelation depends only on $\tau = t_{1} - t_{2}$ \\ 
+$E\lbrace x(t + \tau)x(t)\rbrace = R(\tau)$.\\
+$E\lbrace |x(t)|^{2}\rbrace= R(0)$  \\
+
+Therefore 
+\begin{align}
+     E\lbrace [x(8) - x[5]]^{2}\rbrace &= E\lbrace [x(8)]^{2}\rbrace + E\lbrace [x(5)]^{2}\rbrace - 2E\lbrace x(8)x(5)\rbrace \nonumber \\
+     &= R(0) + R(0) - 2R(3) \nonumber\\
+     &= 2A - 2Ae^{-3\alpha} \nonumber
+\end{align}
+\end{frame}
+\end{document}
